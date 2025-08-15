@@ -76,7 +76,22 @@ model Trip {
   endDate DateTime
   imageUrl String?
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-  userId String 
+  userId String
+  locations Location[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+model Location {
+
+  id String @id @default(cuid())
+  locationTitle String
+  latitude Float
+  longitude Float
+  trip Trip @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  tripId String
+  order Int @default(0)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

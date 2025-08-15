@@ -6,6 +6,7 @@ import { Github, LogOut, User } from "lucide-react";
 import { login, logout } from "@/lib/auth-actions";
 import { useSession } from "next-auth/react";
 import { Button } from "./ui/button";
+
 function Navbar() {
   const { data: session } = useSession();
 
