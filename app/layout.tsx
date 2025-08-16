@@ -31,8 +31,10 @@ export default function RootLayout({
       >
         <SessionProvider>
           <AuthSessionProvider>
-            <Navbar />
-            {children}
+            <div className="sticky top-0 z-50 bg-white shadow-sm">
+              <Navbar />
+            </div>
+            <div className="pt-6">{children}</div>
           </AuthSessionProvider>
         </SessionProvider>
       </body>

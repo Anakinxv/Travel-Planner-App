@@ -7,7 +7,8 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { useState } from "react";
-
+import Map from "./Map"; // Assuming you
+import SortableItinerary from "./SortableItinerary";
 export type TripWithLocation = Trip & {
   locations: Location[];
 };
@@ -105,24 +106,6 @@ function Tripdetail({ trip }: TripdetailProps) {
                   </div>
                 </div>
               </div>
-
-              {trip.locations.length === 0 && (
-                <div className="text-center p-4">
-                  <p>Add locations to see them on the map.</p>
-                  <Link href={`/trips/${trip.id}/itinerary/new`}>
-                    <Button>
-                      {" "}
-                      <Plus className="mr-2 h-5 w-5" /> Add Location
-                    </Button>
-                  </Link>
-                </div>
-              )}
-
-              <div>
-                <p className="text-gray-600 leading-relaxed">
-                  {trip.description}
-                </p>
-              </div>
             </div>
           </TabsContent>
 
@@ -136,34 +119,20 @@ function Tripdetail({ trip }: TripdetailProps) {
                 <p>Add locations to see them on the itinerary.</p>
                 <Link href={`/trips/${trip.id}/itinerary/new`}>
                   <Button>
+                    {" "}
                     <Plus className="mr-2 h-5 w-5" /> Add Location
                   </Button>
                 </Link>
               </div>
             ) : (
-              <ul className="space-y-4">
-                {trip.locations.map((location) => (
-                  <li
-                    key={location.id}
-                    className="p-4 rounded-lg shadow bg-gray-50"
-                  >
-                    <div className="flex items-center">
-                      <MapPin className="h-5 w-5 mr-2 text-blue-500" />
-                      <span className="font-semibold">
-                        {location.locationTitle}
-                      </span>
-                    </div>
-                    <p className="text-gray-600">
-                      Lat: {location.latitude}, Lng: {location.longitude}
-                    </p>
-                  </li>
-                ))}
-              </ul>
+              <SortableItinerary locations={trip.locations} tripId={trip.id} />
             )}
           </TabsContent>
 
           <TabsContent value="map" className="space-y-6">
-            <div className="h-72 rounded-lg overflow-hidden shadow"></div>
+            <div className="h-72 rounded-lg overflow-hidden shadow">
+              <Map itineraries={trip.locations} />
+            </div>
             {trip.locations.length === 0 && (
               <div className="text-center p-4">
                 <p>Add locations to see them on the map.</p>

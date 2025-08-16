@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Travel Planner
 
-## Getting Started
+Travel Planner es una aplicación web para organizar tus viajes, crear itinerarios y visualizar los destinos visitados en un globo interactivo.
 
-First, run the development server:
+## Sobre el proyecto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Este proyecto fue realizado completamente desde cero por mí, sin copiar plantillas ni utilizar generadores automáticos. Todo el código, diseño y funcionalidad fueron desarrollados manualmente, aprendiendo y aplicando cada concepto durante el proceso. Es un trabajo original y personal, pensado para poner en práctica y demostrar mis conocimientos.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Lecciones aprendidas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Durante el desarrollo de este proyecto, aprendí y apliqué varios conceptos y herramientas modernas del ecosistema de Next.js y React, incluyendo:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js 15**: Uso de rutas, páginas, componentes y optimización con Turbopack.
+- **React 19**: Componentes funcionales, hooks y manejo de estado.
+- **Next Auth**: Implementación de autenticación segura y gestión de sesiones.
+- **Prisma**: ORM para modelar y consultar la base de datos de manera eficiente.
+- **Tailwind CSS**: Estilizado rápido y responsivo con utilidades modernas.
+- **React Three Fiber & Drei**: Renderizado de gráficos 3D y visualización interactiva (globo).
+- **React Google Maps API**: Integración de mapas y ubicaciones.
+- **Gestión de archivos**: Subida y manejo de imágenes con UploadThing.
+- **Radix UI**: Componentes accesibles y personalizables.
+- **Eslint y TypeScript**: Mejores prácticas de código y tipado estático.
+- **Animaciones**: Uso de librerías para transiciones y efectos visuales.
 
-## Learn More
+Cada dependencia y herramienta fue integrada y configurada manualmente, lo que me permitió entender mejor cómo funcionan y cómo se relacionan entre sí en un proyecto real.
 
-To learn more about Next.js, take a look at the following resources:
+## Características
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Dashboard con todos tus viajes y detalles.
+- Visualización de países visitados en un globo 3D.
+- Detalle de cada viaje con imagen, fechas y resumen.
+- Añadir nuevas ubicaciones a tus viajes.
+- Interfaz moderna y responsiva.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Vistas de la aplicación
 
-## Deploy on Vercel
+### Dashboard de viajes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Dashboard](ReadMeImg/Macbook-Air-2011x1181%203.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Globo interactivo y países visitados
+
+![Globo y países](ReadMeImg/Macbook-Air-2011x1181%204.png)
+
+### Detalle de un viaje
+
+![Detalle de viaje](ReadMeImg/Macbook-Air-2011x1181%205.png)
+
+---
+
+¡Así se ve la aplicación! Este proyecto es una muestra de aprendizaje y esfuerzo

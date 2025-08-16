@@ -6,7 +6,7 @@ import prisma from "@/lib/prisma";
 import { redirect } from "next/navigation";
 
 async function geocodeAddress(address: string) {
-  const apiKey = process.env.GOOGLE_MAPS_APIKEY!;
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!;
   const response = await fetch(
     `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
       address

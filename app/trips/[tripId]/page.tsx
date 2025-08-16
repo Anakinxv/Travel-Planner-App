@@ -6,12 +6,17 @@ import { auth } from "@/auth";
 import prisma from "@/lib/prisma";
 import Tripdetail from "@/components/Tripdetail";
 
-async function DetailedTrip({ params }: { params: { tripId: string } }) {
+export default async function DetailedTrip({
+  params,
+}: {
+  params: Promise<{ tripId: string }>;
+}) {
+  const { tripId } = await params; // 👈 Espera los params si son una promesa
   const session = await auth();
 
   const trip = await prisma.trip.findUnique({
     where: {
-      id: params.tripId,
+      id: tripId,
       userId: session?.user?.id ?? "",
     },
     include: {
@@ -34,5 +39,3 @@ async function DetailedTrip({ params }: { params: { tripId: string } }) {
 
   return <Tripdetail trip={trip} />;
 }
-
-export default DetailedTrip;
