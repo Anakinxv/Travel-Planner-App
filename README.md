@@ -4,7 +4,7 @@ Travel Planner es una aplicación web para organizar tus viajes, crear itinerari
 
 ## Sobre el proyecto
 
-Este proyecto fue realizado completamente desde cero por mí, sin copiar plantillas ni utilizar generadores automáticos. Todo el código, diseño y funcionalidad fueron desarrollados manualmente, aprendiendo y aplicando cada concepto durante el proceso. Es un trabajo original y personal, pensado para poner en práctica y demostrar mis conocimientos.
+Este proyecto fue realizado siguiendo un tutorial, pero con el objetivo principal de aprender y experimentar. Durante el proceso, adapté y expandí el contenido para profundizar en los conceptos y desarrollar habilidades prácticas. No se trata de una simple copia, sino de un ejercicio de aprendizaje y personalización, donde cada parte fue entendida y ajustada según mis necesidades y curiosidad.
 
 ## Lecciones aprendidas
 
